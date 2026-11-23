@@ -1,6 +1,10 @@
 import * as fs from "node:fs";
-const inRoot = process.env.MAKEFUN_INPUT_DIR || process.argv[2] || "/input";
-const outRoot = process.env.MAKEFUN_OUTPUT_DIR || process.argv[3] || "/output";
+function flag(name: string): string | undefined {
+  const i = process.argv.indexOf(name);
+  return i >= 0 && i + 1 < process.argv.length ? process.argv[i + 1] : undefined;
+}
+const inRoot = process.env.MAKEFUN_INPUT_DIR || flag("--input") || process.argv[2] || "/input";
+const outRoot = process.env.MAKEFUN_OUTPUT_DIR || flag("--output") || process.argv[3] || "/output";
 function run(p: Buffer, inp: Buffer): [Buffer, number] {
   const s: number[] = [];
   const c: number[] = [];

@@ -1,0 +1,5 @@
+# Lessons reviewed (23 Nov 2026)
+Read intelligence/lessons-learned.md + failed-hypotheses.md. Applied:
+FH-2 prose spec only (check 100%). FH-5 kit directly. FH-8 repo frozen
+after bundle. FH-10 env vars honored (0 -> fixed -> 1,000,000). FH-9 kit
+from /c/{slug}/kit. 36/36 self-test first. Small mature entry.
